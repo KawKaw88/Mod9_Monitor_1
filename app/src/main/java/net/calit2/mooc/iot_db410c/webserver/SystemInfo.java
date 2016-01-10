@@ -52,19 +52,20 @@ public class SystemInfo {
      *
      * @return      ArrayList<Integer> of values for each GPIO Pin
      */
-    ArrayList<Integer> getGPIOValues() {
-        GpioProcessor gpioProcessor = new GpioProcessor();
-
-        ArrayList<Integer> value = new ArrayList<>();
-
-        GpioProcessor.Gpio[] allPins = gpioProcessor.getAllPins();
-
-        for(GpioProcessor.Gpio gpio : allPins) {
-            value.add(gpio.getValue());
-        }
-
-        return value;
-    }
+    // $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+//    ArrayList<Integer> getGPIOValues() {
+//        GpioProcessor gpioProcessor = new GpioProcessor();
+//
+//        ArrayList<Integer> value = new ArrayList<>();
+//
+//        GpioProcessor.Gpio[] allPins = gpioProcessor.getAllPins();
+//
+//        for(GpioProcessor.Gpio gpio : allPins) {
+//            value.add(gpio.getValue());
+//        }
+//
+//        return value;
+//    }
 
     /**
      * Name:        getGPIODirection
@@ -73,19 +74,20 @@ public class SystemInfo {
      *
      * @return      ArrayList<String> of the Direction of each GPIO Pin
      */
-    ArrayList<String> getGPIODirection() {
-        GpioProcessor gpioProcessor = new GpioProcessor();
-
-        ArrayList<String> direction = new ArrayList<>();
-
-        GpioProcessor.Gpio[] allPins = gpioProcessor.getAllPins();
-
-        for (GpioProcessor.Gpio gpio : allPins) {
-            direction.add(gpio.getDirection());
-        }
-
-        return direction;
-    }
+    // $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+//    ArrayList<String> getGPIODirection() {
+//        GpioProcessor gpioProcessor = new GpioProcessor();
+//
+//        ArrayList<String> direction = new ArrayList<>();
+//
+//        GpioProcessor.Gpio[] allPins = gpioProcessor.getAllPins();
+//
+//        for (GpioProcessor.Gpio gpio : allPins) {
+//            direction.add(gpio.getDirection());
+//        }
+//
+//        return direction;
+//    }
 
     /**
      * Name:        getBluetoothStatus

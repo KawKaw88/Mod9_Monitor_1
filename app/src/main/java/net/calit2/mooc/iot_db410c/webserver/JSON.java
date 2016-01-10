@@ -86,34 +86,38 @@ public class JSON {
 
             peripherals.put(context.getString(R.string.usb), usb);
 
-            // GPIO
-            JSONArray gpio = new JSONArray();
-
-            ArrayList<String> direction = info.getGPIODirection();
-            ArrayList<Integer> values = info.getGPIOValues();
-
-            // Values are 23 and 34 to account for the GPIO Numbers
-            for (int i = 23; i < 34; i++) {
-                JSONObject temp = new JSONObject();
-
-                if (i == 30) {
-                    continue;
-                }
-
-                temp.put(context.getString(R.string.gpio_number), i);
-                temp.put(context.getString(R.string.value),
-                        values.get(i - 23));
-                temp.put(context.getString(R.string.direction),
-                        direction.get(i - 23));
-                gpio.put(temp);
-            }
+            // $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+//            // GPIO
+//            JSONArray gpio = new JSONArray();
+//
+//            ArrayList<String> direction = info.getGPIODirection();
+//            ArrayList<Integer> values = info.getGPIOValues();
+//
+//            // Values are 23 and 34 to account for the GPIO Numbers
+//            for (int i = 23; i < 34; i++) {
+//                JSONObject temp = new JSONObject();
+//
+//                if (i == 30) {
+//                    continue;
+//                }
+//
+//                temp.put(context.getString(R.string.gpio_number), i);
+//                temp.put(context.getString(R.string.value),
+//                        values.get(i - 23));
+//                temp.put(context.getString(R.string.direction),
+//                        direction.get(i - 23));
+//                gpio.put(temp);
+//            }
 
             // Combine Everything
             JSONObject status = new JSONObject();
 
             status.put(context.getString(R.string.computation), computation);
             status.put(context.getString(R.string.networks), network);
-            status.put(context.getString(R.string.gpio), gpio);
+
+            // $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+            //status.put(context.getString(R.string.gpio), gpio);
+
             status.put(context.getString(R.string.peripherals), peripherals);
             status.put(context.getString(R.string.last_update),
                     info.getLastUpdate());

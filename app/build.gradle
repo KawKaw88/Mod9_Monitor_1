@@ -33,5 +33,7 @@ model {
 dependencies {
     //compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-v4:22.0.0'
-    compile 'net.calit2.mooc.iot_db410c:db410c_gpiolib:1.0.7'
+
+    // $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+    //compile 'net.calit2.mooc.iot_db410c:db410c_gpiolib:1.0.7'
 }

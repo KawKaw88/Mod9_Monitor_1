@@ -17,7 +17,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-import net.calit2.mooc.iot_db410c.db410c_gpiolib.GpioProcessor;
+// $TODO@TJS 1-10-2016 was in original code, but am commenting out.  Should be available in future course.
+//import net.calit2.mooc.iot_db410c.db410c_gpiolib.GpioProcessor;
 
 /**
  * Name:        SystemInfo

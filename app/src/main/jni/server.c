@@ -99,6 +99,8 @@ int initializeSocket(const char * ipaddress, const char * port) {
 
     __android_log_print(ANDROID_LOG_INFO,TAG,"Creating Socket");
 
+    __android_log_print(ANDROID_LOG_INFO,TAG,"$TODO@TJS 1-10-2015 debug 54t: Waldo was here!");
+
     //initialize socket
     int sock = socket(serverinfo->ai_family, serverinfo->ai_socktype, serverinfo->ai_protocol);
     if (sock < 0) {
@@ -116,14 +118,19 @@ int initializeSocket(const char * ipaddress, const char * port) {
 
     __android_log_print(ANDROID_LOG_INFO,TAG,"Binding Socket");
 
-    //Bind Socket to ip address
+    __android_log_print(ANDROID_LOG_INFO,TAG,"$TODO@TJS 1-10-2015 debug 54u: Waldo was here!");
+
+        //Bind Socket to ip address
     if (bind(sock, serverinfo->ai_addr,serverinfo->ai_addrlen) < 0) {
         __android_log_print(ANDROID_LOG_ERROR, TAG, "Socket Binding Failed", 1);
         endServer(sock, serverinfo, 0);
     }
 
     __android_log_print(ANDROID_LOG_INFO,TAG,"Listening to socket");
-    //Listen to 10 requests at a time
+
+    __android_log_print(ANDROID_LOG_INFO,TAG,"$TODO@TJS 1-10-2015 debug 54v: Waldo was here!");
+
+        //Listen to 10 requests at a time
     if (listen(sock, 10) < 0) {
         __android_log_print(ANDROID_LOG_ERROR, TAG, "Socket listening failed", 1);
         endServer(sock, serverinfo, 0);
